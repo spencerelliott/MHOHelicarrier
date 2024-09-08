@@ -1,10 +1,9 @@
 FROM docker.io/library/alpine
 
 RUN apk update
-RUN apk add git dotnet6-sdk sqlite caddy bash
+RUN apk add git dotnet6-sdk sqlite caddy bash curl
 
 RUN mkdir /mho
-
 
 WORKDIR /mho
 
@@ -22,7 +21,11 @@ COPY data/Calligraphy.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/
 COPY data/mu_cdata.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Data/Game/
 
 # Copy the configuration
-COPY data/Config.BypassAuth.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
+# COPY data/Config.BypassAuth.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
+COPY data/Config.Default.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
+
+# Copy Linux SQLite interop files
+ADD data/sqlite/* /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/
 
 # Copy necessary files to host the server
 ADD web/ /mho/web

@@ -1,5 +1,7 @@
 localhost {
     root * web/
     file_server
-    reverse_proxy /AuthServer/* localhost:8080/{query}
+    handle_path /AuthServer/* {
+        reverse_proxy localhost:8080
+    }
 }

@@ -1,0 +1,2 @@
+Copy Calligraphy.sip and mc_cdata.sip to this folder from "Data/Game" where Marvel Heroes is installed before building the container
+

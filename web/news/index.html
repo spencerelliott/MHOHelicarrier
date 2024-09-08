@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+  <meta charset="utf-8">
+
+  <title>MHServerEmu Guide</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black_custom.css" id="theme">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61981167-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-61981167-2');
+  </script>
+
+
+</head>
+
+
+	<body>
+
+        		<div class="reveal">
+			<div class="slides">
+				<section>
+				
+				
+
+				
+					
+
+					
+
+					<section><h2 id="welcome-to-mhserveremu-030">Welcome to MHServerEmu 0.3.0!</h2>
+
+<p>Welcome to the third official release of MHServerEmu! This update represents our biggest leap forward since we started this project, with features like powers, enemy AI, loot tables, and player progress persistence finally starting to work.</p>
+
+<p>In this panel you will find an overview of what you can check out in this version of MHServerEmu.</p>
+
+<p>Use the navigation buttons in the bottom right corner to browse. You can open this panel again at any time by pressing the news button [N].</p>
+</section>
+				
+					
+
+					
+						
+						</section><section>
+					
+
+					<section><h2 id="new-in-version-030">New In Version 0.3.0</h2>
+
+<ul>
+  <li>
+    <p>Many powers that deal damage directly now work consistently.</p>
+  </li>
+  <li>
+    <p>Most enemies and friendly NPCs now have fully-functioning AI.</p>
+  </li>
+  <li>
+    <p>Team-ups and vanity pets can now be summoned. Team-ups will join you in combat.</p>
+  </li>
+  <li>
+    <p>Heroes and team-ups now start at level 1 and can gain experience and level up all the way to 60.</p>
+  </li>
+  <li>
+    <p>Loot dropping from enemies is now rolled using the original loot tables.</p>
+  </li>
+  <li>
+    <p>Your progress, including levels and inventory contents, will now persist when transferring between regions or logging out.</p>
+  </li>
+  <li>
+    <p>Stash tabs can now be purchased and customized.</p>
+  </li>
+</ul>
+</section>
+				
+					
+
+					
+						
+						</section><section>
+					
+
+					<section><h2 id="known-issues">Known Issues</h2>
+
+<ul>
+  <li>
+    <p>Powers that rely on buffs / debuffs (conditions), spawned areas (hotspots), summons, and other complex mechanics will not function correctly until those systems are implemented.</p>
+  </li>
+  <li>
+    <p>Resources (spirit, anger, power cosmic, etc.) are not yet implemented.</p>
+  </li>
+  <li>
+    <p>Talents, traits, and passives are not yet implemented.</p>
+  </li>
+  <li>
+    <p>Items currently do not have affixes, but your hero’s baseline stats are buffed to compensate for this.</p>
+  </li>
+  <li>
+    <p>Dynamic combat level (level scaling) is currently not implemented, so all combat calculations are based on level 60.</p>
+  </li>
+  <li>
+    <p>Assist and passive modes for team-ups are not yet implemented.</p>
+  </li>
+  <li>
+    <p>Hero synergies can be selected, but they do not affect your stats.</p>
+  </li>
+</ul>
+</section>
+				
+					
+
+					
+						
+						</section><section>
+					
+
+					<section><p>You can get the latest version of MHServerEmu on <a onclick="myApi.OpenExternalBrowserFromJS('https://github.com/Crypto137/MHServerEmu')">GitHub</a>.</p>
+
+<p>If you have any questions or suggestions, be sure to let us know on <a onclick="myApi.OpenExternalBrowserFromJS('https://discord.gg/hjR8Bj52t3')">Discord</a>.</p>
+
+<p>We regularly post progress reports on our <a onclick="myApi.OpenExternalBrowserFromJS('https://crypto137.github.io/MHServerEmu/')">blog</a>.</p>
+
+<p>Thank you for your interest and support. Have fun!</p>
+</section>
+				
+			</div>
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+		width: 1280,
+		height: 960,
+        controls: true,
+        progress: true,
+        history: false,
+        center: true,
+		keyboard: false,
+		mouseWheel: false,
+		touch: false,
+
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+		transitionSpeed: 'fast',
+		backgroundTransition: 'none',
+		viewDistance: 2,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            //{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            //{ src: 'plugin/zoom-js/zoom.js', async: true },
+            //{ src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
+
+
+	</body>
+</html>

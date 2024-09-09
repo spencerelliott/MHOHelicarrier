@@ -11,6 +11,9 @@ WORKDIR /mho
 RUN git clone https://github.com/Crypto137/MHServerEmu.git
 WORKDIR MHServerEmu
 
+RUN echo "Checking out branch ${SERVER_BRANCH}"
+RUN git checkout $SERVER_BRANCH
+
 # Build the server for the first time
 RUN dotnet build MHServerEmu.sln
 
@@ -29,10 +32,16 @@ ADD data/sqlite/* /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/
 
 # Copy necessary files to host the server
 ADD web/ /mho/web
+
 COPY Caddyfile /mho/Caddyfile
-COPY cli.sh /mho/cli.sh
 
-RUN chmod +x /mho/cli.sh
+# COPY cli.sh /mho/cli.sh
+# RUN chmod +x /mho/cli.sh
 
-ENTRYPOINT ["bash", "cli.sh"]
+COPY server.sh /mho/server.sh
+RUN chmod +x /mho/server.sh
+
+RUN mkdir /mho/player_data
+
+ENTRYPOINT ["bash", "server.sh"]
 

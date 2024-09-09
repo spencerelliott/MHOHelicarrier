@@ -1,4 +1,13 @@
-localhost {
+{
+    auto_https disable_redirects
+}
+
+http://localhost {
+    root * web/
+    file_server
+}
+
+https://localhost {
     root * web/
     file_server
     handle_path /AuthServer/* {

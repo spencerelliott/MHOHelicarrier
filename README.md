@@ -114,3 +114,8 @@ Press the settings cog for RunServer.sh in your Library to open the settings and
 Switch back to Game Mode, launch the MHO Server shortcut and wait for the server to completely start up. Hit the "STEAM" button, go back to Home (while leaving MHO Server running) and launch Marvel Heroes 
 Omega. If everything is set up correctly, the game should launch into Avengers Tower while skipping the login screen. Enjoy the game!
 
+### Shutting Down the Game
+
+When you're done playing, quit out of Marvel Heroes Omega and switch to MHO Server. Either set up a controller shortcut for the B button to hit CTRL-C or hit the STEAM button and press "Exit Game" on MHO Server.
+
+

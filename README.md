@@ -35,7 +35,7 @@ configuration files the server will require. Once the image has been successfull
 Since podman runs without root on the Steam Deck, the following command must be run once before starting the server for the first time:
 
 ```bash
-sudo sysctl net.ipv4.ip_unprivileged_port_start=80`
+sudo sysctl net.ipv4.ip_unprivileged_port_start=80
 ```
 
 **NOTE: This setting may reset from time to time so it is best to run this step every time the server is run. Open `RunServer.sh` and uncomment the line that runs this command every
@@ -91,7 +91,7 @@ Press the settings cog for MarvelHeroesOmega.exe in your Library to open the set
 
 **Shortcut:**</br>
 * **Name:** Marvel Heroes Omega</br>
-* **Launch Options:** `-robocopy -nosteam -siteconfigurl=localhost/SiteConfig.xml -emailaddress=test1@test.com -password=123
+* **Launch Options:** `-robocopy -nosteam -siteconfigurl=localhost/SiteConfig.xml -emailaddress=test1@test.com -password=123`
 
 **Compatibility:**</br>
 * **Force the use of a specific Steam Play compatibility tool:** Checked

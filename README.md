@@ -76,7 +76,7 @@ Run the Marvel Heroes client with the following command line parameters:
 This project defaults to bypassing the authentication process so users do not need to create an account before starting the game. All of the player's
 data will be stored in the `player_data/` folder.
 
-## Set up Steam Shortcuts
+## Set up Steam Shortcuts for Steam Deck
 
 ### Adding Marvel Heroes Omega
 
@@ -107,5 +107,10 @@ Press the settings cog for RunServer.sh in your Library to open the settings and
 
 **Shortcut:**</br>
 * **Name:** MHO Server</br>
-* **Launch Options:** --workdir [path to MHOHelicarrier folder] -e [path to MHOHelicarrier folder]/RunServer.sh
+* **Launch Options:** `--workdir [path to MHOHelicarrier folder] -e [path to MHOHelicarrier folder]/RunServer.sh`
+
+### Launching the Server and Client
+
+Switch back to Game Mode, launch the MHO Server shortcut and wait for the server to completely start up. Hit the "STEAM" button, go back to Home (while leaving MHO Server running) and launch Marvel Heroes 
+Omega. If everything is set up correctly, the game should launch into Avengers Tower while skipping the login screen. Enjoy the game!
 

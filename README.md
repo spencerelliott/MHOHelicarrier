@@ -91,7 +91,7 @@ Press the settings cog for MarvelHeroesOmega.exe in your Library to open the set
 
 **Shortcut:**</br>
 * **Name:** Marvel Heroes Omega</br>
-* **Launch Options:** `-robocopy -nosteam -siteconfigurl=localhost/SiteConfig.xml -emailaddress=test1@test.com -password=123`
+* **Launch Options:** `-robocopy -nosteam -siteconfigurl=localhost/SiteConfig.xml -emailaddress=test1@test.com -password=123
 
 **Compatibility:**</br>
 * **Force the use of a specific Steam Play compatibility tool:** Checked

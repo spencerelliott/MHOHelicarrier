@@ -7,6 +7,9 @@ RUN mkdir /mho
 
 WORKDIR /mho
 
+# Make sure we download the latest code
+ARG CACHEBUST
+
 # Clone the latest version of the server into the container
 RUN git clone https://github.com/Crypto137/MHServerEmu.git
 WORKDIR MHServerEmu
@@ -34,9 +37,6 @@ ADD data/sqlite/* /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/
 ADD web/ /mho/web
 
 COPY Caddyfile /mho/Caddyfile
-
-# COPY cli.sh /mho/cli.sh
-# RUN chmod +x /mho/cli.sh
 
 COPY server.sh /mho/server.sh
 RUN chmod +x /mho/server.sh

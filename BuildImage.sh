@@ -8,4 +8,6 @@ if ! [ -f data/mu_cdata.sip ] || ! [ -f data/Calligraphy.sip ]; then
     exit 1
 fi
 
-podman build --env SERVER_BRANCH=${BRANCH} --tag mho .
+podman build --build-arg CACHEBUST=$(date +%s) --env SERVER_BRANCH=${BRANCH} --tag mho .
+yes | podman image prune
+

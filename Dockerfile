@@ -11,10 +11,10 @@ WORKDIR /mho
 ARG CACHEBUST
 
 # Clone the latest version of the server into the container
-RUN git clone https://github.com/Crypto137/MHServerEmu.git
+RUN git clone ${GIT_URL}
 WORKDIR MHServerEmu
 
-RUN echo "Checking out branch ${SERVER_BRANCH}"
+RUN echo "Checking out branch ${SERVER_BRANCH} from ${GIT_URL}"
 RUN git checkout $SERVER_BRANCH
 
 # Build the server for the first time
@@ -27,7 +27,8 @@ COPY data/Calligraphy.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/
 COPY data/mu_cdata.sip /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Data/Game/
 
 # Copy the configuration
-COPY data/Config.BypassAuth.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
+COPY data/Config.IgnoreSessionToken.JSON.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
+# COPY data/Config.IgnoreSessionToken.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
 # COPY data/Config.Default.ini /mho/MHServerEmu/src/MHServerEmu/bin/x64/Debug/net6.0/Config.ini
 
 # Copy Linux SQLite interop files
